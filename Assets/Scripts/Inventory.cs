@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public int coins;
+    private int coins, totalCoins;
 
     //GETTERS AND SETTERS
     public void setCoins(int cuantity)
     {
-        coins += cuantity;
+        setPoints(cuantity);
+        totalCoins += 1;
     }
 
     public int getCoins()
     {
         return coins;
     }
+
+    public void setPoints(int cuantity)
+    {
+        coins += cuantity;
+    }
+
+    public int getTotalCoins()
+    {
+        return totalCoins;
+    }
+
 
 }

@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     //PUBLIC VARIABLES
     public float speed;
+    public int life;
 
     //PRIVATE VARIABLES
     private Rigidbody rb;
