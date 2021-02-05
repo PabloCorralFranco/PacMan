@@ -75,10 +75,8 @@
     <Compile Include="Assets\Nature Pack\Scripts\IL3DN_SimpleMouseLook.cs" />
     <Compile Include="Assets\Nature Pack\Scripts\IL3DN_Snow.cs" />
     <Compile Include="Assets\Nature Pack\Scripts\IL3DN_Wind.cs" />
-    <Compile Include="Assets\Scripts\Consumable.cs" />
-    <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\Scripts\Interface.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Convenience\Consumable.cs" />
+    <Compile Include="Assets\Scripts\Convenience\Transporter.cs" />
     <Compile Include="Assets\Scripts\Knights\Blinky.cs" />
     <Compile Include="Assets\Scripts\Knights\Clyde.cs" />
     <Compile Include="Assets\Scripts\Knights\Enemy.cs" />
@@ -86,8 +84,10 @@
     <Compile Include="Assets\Scripts\Knights\Pinky.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Main Menu\menuTransporter.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Transporter.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\Manager\Interface.cs" />
+    <Compile Include="Assets\Scripts\Player\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

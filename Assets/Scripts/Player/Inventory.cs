@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    //PRIVATE VARIABLES
     private int coins, totalCoins;
 
     //GETTERS AND SETTERS

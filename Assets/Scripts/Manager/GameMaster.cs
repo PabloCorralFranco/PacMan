@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
+    //PUBLIC VARIABLES
     public float[] scatterTimes, chaseTimes;
     public float frightenedTime;
     public bool frightened;
@@ -12,6 +13,7 @@ public class GameMaster : MonoBehaviour
     public GameObject spawnPlayer;
     public GameObject[] spawnEnemy;
 
+    //PRIVATE VARIABLES
     private Enemy[] enemies;
     private Player player;
     private Interface iface;
@@ -57,7 +59,6 @@ public class GameMaster : MonoBehaviour
                 for (int j = 0; j < enemies.Length; j++)
                 {
                     enemies[j].roaming = false;
-                    enemies[j].StopAllCoroutines();
                 }
                 i += 1;
                 inChase = true;
@@ -74,7 +75,6 @@ public class GameMaster : MonoBehaviour
         frightened = true;
         for (int i = 0; i < enemies.Length; i++)
         {
-            //enemies[i].StopAllCoroutines();
             enemies[i].StartCoroutine("frightened", enemies[i].frightenedTime);
         }
     }
@@ -86,7 +86,6 @@ public class GameMaster : MonoBehaviour
         player.life -= 1;
         if(player.life <= 0)
         {
-            Debug.Log("Perdida de la partida");
             SceneManager.LoadScene("SampleScene");
         }
         else
@@ -102,7 +101,6 @@ public class GameMaster : MonoBehaviour
         for(int i = 0; i < enemies.Length; i++)
         {
             enemies[i].transform.position = spawnEnemy[i].transform.position;
-            //enemies[i].StopAllCoroutines();
             enemies[i].roaming = false;
 
             if (enemies[i].knightName.Equals("Clyde") || enemies[i].knightName.Equals("Pinky"))
@@ -115,7 +113,6 @@ public class GameMaster : MonoBehaviour
                 enemies[i].canExit = true;
             }
         }
-        //StopCoroutine("gameScheme");
         inChase = true;
         StartCoroutine("gameScheme");
     }

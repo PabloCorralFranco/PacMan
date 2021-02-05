@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Interface : MonoBehaviour
 {
+    //PUBLIC VARIABLES
     public GameObject winningScreen;
     public TextMeshProUGUI coinsText, livesText;
+    //PRIVATE VARIABLES
     private bool win;
 
     void Start()

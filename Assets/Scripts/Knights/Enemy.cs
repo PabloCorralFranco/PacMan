@@ -77,7 +77,10 @@ public class Enemy : MonoBehaviour
         {
             if (frightenedState)
             {
-                FindObjectOfType<Inventory>().setPoints(200);
+                Inventory inv = FindObjectOfType<Inventory>();
+                inv.setPoints(200);
+                Interface iface = FindObjectOfType<Interface>();
+                iface.changeCoinsTxt(inv.getCoins());
                 transform.position = FindObjectOfType<GameMaster>().transform.position;
                 frightenedState = false;
             }

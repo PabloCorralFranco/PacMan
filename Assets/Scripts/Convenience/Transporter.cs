@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Transporter : MonoBehaviour
 {
+    //PUBLIC VARIABLES
     public Transform to;
 
     private void OnTriggerEnter(Collider other)

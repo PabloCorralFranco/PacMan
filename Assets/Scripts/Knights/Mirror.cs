@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Mirror : Enemy
 {
+    //PRIVATE VARIABLES
     private bool inRandom = false;
     private int i = 0;
-    // Update is called once per frame
+
     void Update()
     {
         mirrorPersonality();
@@ -14,7 +15,7 @@ public class Mirror : Enemy
 
     private void mirrorPersonality()
     {
-        if (!roaming && !frightenedState && !inRandom) StartCoroutine("myRandomRoam", 10);
+        if (!roaming && !frightenedState && !inRandom) StartCoroutine("myRandomRoam", 1000);
         if (navMeshAgent.velocity.normalized.magnitude > 0.1f)
         {
             anim.SetFloat("Speed", navMeshAgent.velocity.normalized.magnitude);

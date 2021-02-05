@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Clyde : Enemy
 {
+    //PUBLIC VARIABLES
     public float scatterDistance;
     
     private void Start()
@@ -15,7 +16,6 @@ public class Clyde : Enemy
         roaming = false;
         StartCoroutine("waitingTime", timeToWait);
     }
-    //Two modes: Chasing if far and Scatter when near
     void FixedUpdate()
     {
         if(canExit) clydePersonality();

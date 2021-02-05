@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class menuTransporter : MonoBehaviour
 {
+    //PUBLIC VARIABLES
     public Transform to;
     public Rigidbody rb;
+    //PRIVATE VARIABLES
     private MainMenu menu;
     void Start()
     {

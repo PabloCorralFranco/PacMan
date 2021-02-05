@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    //PUBLIC VARIABLES
     public Rigidbody chestRb;
     public Vector3 direction;
     void Start()
