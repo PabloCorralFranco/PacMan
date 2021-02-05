@@ -52,7 +52,6 @@ public class Enemy : MonoBehaviour
         while (timer < time && i < myPath.Length && frightenedState)
         {
             timer += Time.deltaTime;
-            //int rnd = Random.Range(0, randomPositions.Length);
             navMeshAgent.SetDestination(randomPositions[i].transform.position);
             if ((transform.position - randomPositions[i].transform.position).magnitude < 1f)
             {
@@ -81,8 +80,7 @@ public class Enemy : MonoBehaviour
                 FindObjectOfType<Inventory>().setPoints(200);
                 transform.position = FindObjectOfType<GameMaster>().transform.position;
                 frightenedState = false;
-                //Destroy(this.gameObject);
-            } //Hacemos que el enemigo pierda y spawnee en la base, acumulando además puntos para el jugador
+            }
             else
             {
                 FindObjectOfType<GameMaster>().substractLife();
